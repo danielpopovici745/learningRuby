@@ -59,3 +59,34 @@ end
   |num|
   puts "#{num} pizzas left"
 }
+
+#using next inside a loop
+i = 0
+loop do
+  i = i + 2
+  if i == 4
+    next
+    #next skips the current interation so 4 wont be printed to the terminal
+  end
+  puts i 
+  if i == 10
+    break
+  end
+end
+
+# a "do/while" loop using loop and break (do/while not built into ruby)
+loop do
+  puts "do you want to do that again?"
+  answer = gets.chomp
+  if answer != 'yes'
+    break
+  end
+end
+
+#for loop with an array
+
+x = [1,2,3,4,5]
+
+for i in x.reverse do
+  puts i
+end
