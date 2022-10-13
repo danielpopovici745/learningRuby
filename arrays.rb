@@ -35,3 +35,12 @@ array2 = [1,2,3,4,5]
 array3 = array2.map {|e| e + 2}
 p array2
 p array3
+
+p array2.sample
+p array2.take(3)
+p array2[1..-1]
+p array2.size
+p array2.empty?
+p array2 << nil
+p array2.compact # removes nil values
+p array2 & array3
