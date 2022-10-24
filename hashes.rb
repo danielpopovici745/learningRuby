@@ -54,3 +54,62 @@ gas_cars ={
 
 pp electric_cars[:tesla]
 pp gas_cars[:honda]
+
+#iterating over a hash
+
+person = {
+  name: 'bob',
+  height: '6 ft',
+  weight: '160 lbs',
+  hair: 'brown'
+}
+
+person.each do |key,value|
+  puts "Bob's #{key} is #{value}"
+end 
+
+family = {  uncles: ["bob", "joe", "steve"],
+  sisters: ["jane", "jill", "beth"],
+  brothers: ["frank","rob","david"],
+  aunts: ["mary","sally","susan"]
+}
+
+immediate_family = family.select do |k,v| k == :sisters || k == :brothers
+end
+
+pp immediate_family.values.flatten
+
+firsthash = {
+  a: 1,
+  b: 2,
+  c: 3
+}
+
+secondhash = {
+  d: 4,
+  e: 5,
+  f: 6
+}
+# Without the ! merge is non-destructive and won't change the original value of firsthash
+p firsthash.merge(secondhash)
+p firsthash
+
+#With ! merge will be destructive and change the original value of firsthash to the new merged hash
+p firsthash.merge!(secondhash)
+p firsthash
+
+electronics = {
+  apple: ['iPhone','iPad'],
+  samsung: ['Galaxy S','Galaxy Tab S']
+}
+
+electronics.each do |k,v| 
+  pp k
+end
+electronics.each do |k,v| 
+  pp v
+end
+electronics.each do |k,v| 
+  pp k
+  pp v
+end
